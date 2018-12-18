@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>影集原图</title>
+	<style type="text/css">
+div,ul,li,a,span,img{margin:0 auto;padding:0;}
+li{list-style:none;}
+#slider{width:1000px;height:350px;margin: 3% auto;position:relative;}
+.slider_list li{position:absolute;display:none;margin-left: 150px;}
+.slider_list li:first-child{display:block;}
+.arrow{display:none;width:30px;height:60px;background-color:rgba(0,0,0,.2);position:absolute;top:50%;margin-top:-30px;}
+.prve{left:0;}
+.next{right:0;}
+.arrow span{display:block;width:10px;height:10px;border-bottom:2px solid #fff;border-left:2px solid #fff;}
+.slider_left{margin:25px 0 0 10px;transform:rotate(45deg);}
+.slider_right{margin:25px 0 0 5px;transform:rotate(-135deg);}
+.arrow:hover{background:#444;}
+#slider:hover .arrow{display:block;}
+.btn_act{background:#db192a;}
+</style>
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var count = 0;
+	var $li = $("#slider>ul>li");
+	$(".next").click(function(){
+		count++;				
+		if(count == $li.length){
+			count =0;
+		}
+		$li.eq(count).fadeIn().siblings().fadeOut();
+		$(".slider_icon i").eq(count).addClass("btn_act").siblings().removeClass('btn_act');
+		console.log(count);
+	});
+	$(".prve").click(function(){
+		count--;
+		if(count == -1){
+			count = $li.length-1;
+		}
+		console.log(count);
+		$li.eq(count).fadeIn().siblings().fadeOut();
+		$(".slider_icon i").eq(count).addClass("btn_act").siblings().removeClass('btn_act');
+	});
+	$(".slider_icon i").mouseenter(function(){
+		$(this).addClass('btn_act').siblings().removeClass("btn_act");
+		$li.eq($(this).index()).fadeIn().siblings().fadeOut();
+		count = $(this).index();
+	});
+});
+</script>
+
+</head>
+<body><script src="/demos/googlegg.js"></script>
+
+<div id="slider">
+	<ul class="slider_list">
+		<li><a href="#"><img src="../img/b44.jpg"></a></li>
+		<li><a href="#"><img src="../img/b11.jpg"></a></li>
+		<li><a href="#"><img src="../img/b55.jpg"></a></li>
+		<li><a href="#"><img src="../img/b22.jpg"></a></li>
+		<li><a href="#"><img src="../img/b33.jpg"></a></li>
+		<li><a href="#"><img src="../img/b66.jpg"></a></li>
+		<li><a href="#"><img src="../img/b88.jpg"></a></li>
+		<li><a href="#"><img src="../img/b77.jpg"></a></li>
+		<li><a href="#"><img src="../img/a55.jpg"></a></li>
+		<li><a href="#"><img src="../img/a22.jpg"></a></li>
+		<li><a href="#"><img src="../img/a44.jpg"></a></li>
+		<li><a href="#"><img src="../img/a33.jpg"></a></li>
+		<li><a href="#"><img src="../img/a11.jpg"></a></li>
+		<li><a href="#"><img src="../img/c33.jpg"></a></li>
+		<li><a href="#"><img src="../img/c66.jpg"></a></li>
+		<li><a href="#"><img src="../img/c77.jpg"></a></li>
+		<li><a href="#"><img src="../img/c55.jpg"></a></li>
+		<li><a href="#"><img src="../img/c22.jpg"></a></li>
+		<li><a href="#"><img src="../img/c11.jpg"></a></li>
+		<li><a href="#"><img src="../img/c88.jpg"></a></li>
+		<li><a href="#"><img src="../img/c44.jpg"></a></li>
+	</ul>
+	<a href="javascript:;" class="arrow prve">
+		<span class="slider_left"></span>
+	</a>
+	<a href="javascript:;" class="arrow next">
+		<span class="slider_right"></span>
+	</a>
+</div>
+</body>
+</html>

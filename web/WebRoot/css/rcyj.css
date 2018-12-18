@@ -1,0 +1,129 @@
+/*页面全局样式*/
+body{
+	font-family: arial;
+	font-size: 12px;
+	padding: 0px;
+	margin: 0px;
+	background:#f8f8f8;
+}
+a{
+	text-decoration: none;
+}
+img{border:none;
+}
+/*页面主体布局*/
+.main{
+	width: 100%;
+	margin: auto;
+	background:#f8f8f8;
+	padding:0px;
+}
+.matter{
+	width: 100%;
+	margin: auto;
+	overflow:hidden;
+}
+.top{width: 100%;
+     margin: auto;
+     background: white;
+     height: 80px;
+ }
+.top .top1{
+	width: 90%;
+	margin: auto;
+	height: 80px;
+}
+.left{
+	width: 20%;
+	float:left;
+	font-family: Buxton Sketch;
+	font-size: 40px;
+	margin: 20px 0px;
+}
+.center{
+	width: 50%;
+	float: left;
+	font-family: 华文行楷;
+	font-size: 40px;
+	margin: 20px 0px;
+	border-left:2px solid black;
+	padding-left: 15px;
+}
+.dhy{
+	width: 100%;
+	background-color: black;
+	margin: auto;
+	overflow:hidden;
+}
+#navMenu{
+	width: 800px;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	overflow: hidden;
+	margin: auto;
+	margin-left: 330px;
+	
+}
+.menu1, .menu1 ul{
+	padding: 0px;
+	list-style-type: none;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.menu1 li{
+	height: 34px;
+	width: 180px;
+	line-height: 34px;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+}
+.menu1 a{
+	display: block;
+	margin:0px;
+	width: 150px;
+	color: #fff;
+	font-weight: bold;
+}
+.menu1 a:hover{
+	color: gray;
+}
+.mulu1{
+	width: 90%;
+	height: 35px;
+	margin:auto;
+	padding-top: 15px;
+	font-size: 15px;
+	font-family:宋体;
+	color:silver;
+}
+.mulu1 a:link{
+	color:silver;
+}
+.mulu1 a:hover {
+	text-decoration: underline;
+	color:silver;
+}
+.qp{
+	padding: 8px 0 8px 0;
+}
+.content{
+	width: 90%;
+	margin: 4% auto;
+	background-color: white;
+	height: 3430px;
+}
+.dhym{
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	margin: auto;
+	overflow:hidden;
+}
+.dhym p{
+	color: #f8f8f8;
+	font-size: 10px;
+	font-family: 楷体;
+	padding-top: 10px;
+}

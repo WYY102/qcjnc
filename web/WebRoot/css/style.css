@@ -1,0 +1,36 @@
+.qcontainer
+{   -webkit-perspective:400;
+	-moz-perspective:400;
+	width:100%;
+    margin:auto;
+    height: 100% }
+.film
+{width:100%;
+height:100%;
+-webkit-transform-style:preserve-3d;
+-webkit-transition:1.5s;
+-moz-transform-style:preserve-3d;
+-moz-transition:1.5s;}
+.qcontainer:hover .film
+{-webkit-transform:rotateY(180deg);
+-moz-transform:rotateY(180deg);}
+.face
+{position:absolute;
+-webkit-backface-visibility:hidden;
+-moz-backface-visibility:hidden;}
+
+.back{
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+	background:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f8f8f8));
+	background:-moz-linear-gradient(top,#f8f8f8,#f8f8f8);width:100%;height:100%;}
+.back .beijing{
+	background-color: #f8f8f8;
+}
+.back table{
+	width: 60%;
+	height:100%;
+	margin: 20px auto;
+	font-family: 华文行楷;
+	font-size: 40px;
+}
